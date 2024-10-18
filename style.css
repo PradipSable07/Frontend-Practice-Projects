@@ -1,0 +1,140 @@
+@import url('https://fonts.googleapis.com/css2?family=Londrina+Sketch&display=swap');
+@font-face {
+    font-family: 'Comic Sans MS'; /* Name of the font */
+    src: url('./assets/comic-sans-ms-font-family/ComicSansMS3.ttf') format('truetype');
+        
+    font-weight: normal;
+    font-style: normal;
+  }
+  
+* {
+	margin: 0;
+	padding: 0;
+}
+body {
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ flex-direction: column;
+
+
+
+}
+img{
+	max-width:100%;
+	display:block;
+}
+.hero-section {
+	display: grid;
+	place-items: center;
+    max-width: 1240px;
+	width: 100%;
+	height: 30vh;
+}
+.projects {
+    max-width: 1240px;
+	width: 100%;
+	display: grid;
+	grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+	gap: 1rem;
+    place-items: center;
+
+
+}
+
+.card {
+	border: 1px solid hsl(57, 10%, 3%);
+	padding: 1rem;
+	/* border-radius: 20px; */
+	text-decoration: none;
+	color: #2c1e1e;
+    text-align:start;
+	grid-row: span 4;
+	display:grid;
+	grid-template-rows:subgrid;
+	background-color: hsl(0, 33%, 96%);
+	transition: all 0.3s ease-in-out;
+	max-width: 300px;
+    width: 100%;
+    font-family: "Comic Sans MS", sans-serif;
+}
+.button-live{
+	color: blueviolet !important;
+
+}
+.card .card-heading{
+    font-family: "Londrina Sketch", sans-serif;
+
+    font-size: 2rem;
+
+}
+.card .card-img {
+	width: 100%;
+    height: 200px;
+    object-fit: cover;
+	border-radius: 10px;
+}
+
+.card-btn-container {
+	display: flex;
+	
+	align-items: center;
+	gap: 0.5rem;
+}
+
+.button {
+	line-height: 1;
+	text-decoration: none;
+	display: inline-flex;
+	border: 1px solid gray;
+	cursor: pointer;
+	align-items: center;
+	gap: 0.75rem;
+	background-color: #fff;
+	color: #6c4343;
+	/* border-radius: 10rem; */
+	font-weight: 600;
+	padding: 0.75rem 1.5rem;
+	padding-left: 20px;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	transition: background-color 0.3s;
+}
+
+.button__icon-wrapper {
+	flex-shrink: 0;
+	width: 25px;
+	height: 25px;
+	position: relative;
+	color: var(--clr);
+	background-color: #fff;
+	border-radius: 50%;
+	display: grid;
+	place-items: center;
+	overflow: hidden;
+}
+
+.button:hover {
+	background-color: #000;
+	color: #fff;
+}
+
+.button:hover .button__icon-wrapper {
+	color: #000;
+}
+
+.button__icon-svg--copy {
+	position: absolute;
+	transform: translate(-150%, 150%);
+}
+
+.button:hover .button__icon-svg:first-child {
+	transition: transform 0.3s ease-in-out;
+	transform: translate(150%, -150%);
+}
+
+.button:hover .button__icon-svg--copy {
+	transition: transform 0.3s ease-in-out 0.1s;
+	transform: translate(0);
+}
