@@ -59,12 +59,16 @@ img{
     font-family: "Comic Sans MS", sans-serif;
 }
 .button-live{
-	color: blueviolet !important;
-
+	color :#165bba !important;
+	font-weight: 600;
+}
+.button-live:hover{
+	color :#ffffff !important;
+	font-weight: 600;
 }
 .card .card-heading{
     font-family: "Londrina Sketch", sans-serif;
-
+    font-weight: 800;
     font-size: 2rem;
 
 }
